@@ -13,6 +13,11 @@ phases:
       - echo Build started on `date`
       - echo Compiling the Go code...
       - go build ./lab_01/hello.go
+  post_build:
+    commands:
+      - aws s3 cp s3://pappgeztest/hello ~/hello
+      - ~/hello > /var/www/html/index2.html
+      - cat /var/www/html/index2.html
 artifacts:
   files:
     - hello
