@@ -1,6 +1,6 @@
 version: 0.2
 env:
-  variables:
+  parameter-store:
     GOOS: "darwin"
 phases:
   build:
