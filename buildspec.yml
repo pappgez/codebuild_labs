@@ -17,6 +17,7 @@ phases:
     commands:
       - ./hello > /var/www/html/index2.html
       - cat /var/www/html/index2.html
+      - aws s3 cp hello s3://pappgeztest/www/hello 
 artifacts:
   files:
     - hello
